@@ -77,6 +77,14 @@ class VoteCuteCatViewController: BaseViewController {
     func successloadingCats(jsonData: JSON) {
         
         catsArray = VoteService.fetchListOfCats(formattedJsonResponse: jsonData)
+        
+        //Store all new cats on UserDefaults so that we can start clean ranking
+        let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: "catsArray") == nil {
+            userDefaults.setValue(NSKeyedArchiver.archivedData(withRootObject: catsArray), forKey: "catsArray")
+            userDefaults.synchronize()
+        }
+        
         randomCatsArray = pickTwoDistinctCats(array: catsArray)
         setupUI()
     }
@@ -103,7 +111,24 @@ class VoteCuteCatViewController: BaseViewController {
     
     @IBAction func catImageTapped(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
-        print("Image Tapped with tag \(randomCatsArray[tag!].catImageUrl!)")
+        print("Image Tapped with tag \(randomCatsArray[tag!].catId!)")
+        
+        
+        //get stored array of cats on userDefaults
+        var arrayFromUserDef : [Cat]
+        let userDefaults = UserDefaults.standard
+        arrayFromUserDef = NSKeyedUnarchiver.unarchiveObject(with: (userDefaults.object(forKey: "catsArray") as! NSData) as Data) as! [Cat]
+       
+        
+        if let i = arrayFromUserDef.index(where: { $0.catId == randomCatsArray[tag!].catId! }) {
+            let selectedCat = arrayFromUserDef[i]
+            selectedCat.catScore = selectedCat.catScore! + 1
+            
+            arrayFromUserDef[i] = selectedCat
+            userDefaults.setValue(NSKeyedArchiver.archivedData(withRootObject: arrayFromUserDef), forKey: "catsArray")
+            userDefaults.synchronize()
+            print("selected \(selectedCat.catScore!)")
+        }
     }
     
     
