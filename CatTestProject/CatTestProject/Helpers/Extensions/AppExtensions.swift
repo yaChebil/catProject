@@ -8,3 +8,12 @@
 
 import Foundation
 
+
+extension Collection where Index == Int {
+    
+    //Picks a random element from an array and return it
+    func randomElement() -> Iterator.Element? {
+        return isEmpty ? nil : self[Int(arc4random_uniform(UInt32(endIndex)))]
+    }
+    
+}

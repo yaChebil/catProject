@@ -18,7 +18,9 @@ class VoteCuteCatViewController: BaseViewController {
     @IBOutlet weak var firstCatImageView: UIImageView!
     @IBOutlet weak var secondCatImageView: UIImageView!
     
+    //array listing all cats from API
     var catsArray = [Cat]()
+    //array which contains always 2 random cats
     var randomCatsArray  = [Cat]()
     
     
@@ -67,6 +69,9 @@ class VoteCuteCatViewController: BaseViewController {
     func successloadingCats(jsonData: JSON) {
         
         catsArray = VoteService.fetchListOfCats(formattedJsonResponse: jsonData)
+        
+        randomCatsArray = pickTwoDistinctCats(array: catsArray)
+        setupUI()
     }
     
     func failureLoadingCats(error: AFError) {
@@ -83,6 +88,44 @@ class VoteCuteCatViewController: BaseViewController {
     
     func searchNewCats() {
         
+    }
+    
+    
+    //MARK:- Helpers
+    
+    func pickTwoDistinctCats(array:[Cat]) -> [Cat] {
+        
+        var catViewsArray = [Cat]()
+        
+        let firstCat = array.randomElement()
+        
+        //unwrap optional var
+        if let firstCat = firstCat {
+            catViewsArray.append(firstCat)
+        }
+        
+        var secondCat = array.randomElement()
+        //loop until secondCat is different from the firstCat picked
+        repeat {
+            secondCat = array.randomElement()
+        } while secondCat!.catId! == firstCat!.catId!
+        
+        //unwrap optional var
+        if let secondCat = secondCat {
+            catViewsArray.append(secondCat)
+        }
+        
+        return catViewsArray
+    }
+    
+    func setupUI () {
+
+        if let imageStringURL = randomCatsArray[0].catImageUrl {
+            firstCatImageView.kf.setImage(with: URL(string: imageStringURL))
+        }
+        if let imageStringURL = randomCatsArray[1].catImageUrl {
+            secondCatImageView.kf.setImage(with: URL(string: imageStringURL))
+        }
     }
     
     
