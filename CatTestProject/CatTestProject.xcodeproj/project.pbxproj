@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		DBB299C1E78550F37F808B8E /* Pods_CatTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE5F1328BFF16308320C50 /* Pods_CatTestProject.framework */; };
 		E509734D200CA721008B71FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509734C200CA721008B71FB /* AppDelegate.swift */; };
-		E509734F200CA721008B71FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509734E200CA721008B71FB /* ViewController.swift */; };
-		E5097352200CA721008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097350200CA721008B71FB /* Main.storyboard */; };
-		E5097354200CA721008B71FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5097353200CA721008B71FB /* Assets.xcassets */; };
-		E5097357200CA721008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097355200CA721008B71FB /* LaunchScreen.storyboard */; };
+		E5097378200D215C008B71FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5097360200D215B008B71FB /* Assets.xcassets */; };
+		E5097379200D215C008B71FB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5097362200D215B008B71FB /* Info.plist */; };
+		E509737A200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097365200D215B008B71FB /* README.md */; };
+		E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097368200D215B008B71FB /* LaunchScreen.storyboard */; };
+		E509737C200D215C008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E509736A200D215B008B71FB /* Main.storyboard */; };
+		E509737D200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736D200D215B008B71FB /* README.md */; };
+		E509737E200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736F200D215B008B71FB /* README.md */; };
+		E509737F200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097371200D215B008B71FB /* README.md */; };
+		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
+		E5097381200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097377200D215B008B71FB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +27,16 @@
 		DD8EEEF784123A72F14B96E7 /* Pods-CatTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatTestProject/Pods-CatTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E5097349200CA721008B71FB /* CatTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E509734C200CA721008B71FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E509734E200CA721008B71FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E5097351200CA721008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E5097353200CA721008B71FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E5097356200CA721008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E5097358200CA721008B71FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5097360200D215B008B71FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5097362200D215B008B71FB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5097365200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5097369200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E509736B200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E509736D200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E509736F200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5097371200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5097377200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +90,130 @@
 			isa = PBXGroup;
 			children = (
 				E509734C200CA721008B71FB /* AppDelegate.swift */,
-				E509734E200CA721008B71FB /* ViewController.swift */,
-				E5097350200CA721008B71FB /* Main.storyboard */,
-				E5097353200CA721008B71FB /* Assets.xcassets */,
-				E5097355200CA721008B71FB /* LaunchScreen.storyboard */,
-				E5097358200CA721008B71FB /* Info.plist */,
+				E5097366200D215B008B71FB /* Modules */,
+				E5097372200D215B008B71FB /* Services */,
+				E509735E200D215B008B71FB /* Resources */,
+				E5097363200D215B008B71FB /* Helpers */,
 			);
 			path = CatTestProject;
+			sourceTree = "<group>";
+		};
+		E509735E200D215B008B71FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E509735F200D215B008B71FB /* Assets */,
+				E5097361200D215B008B71FB /* Plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E509735F200D215B008B71FB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E5097360200D215B008B71FB /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E5097361200D215B008B71FB /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				E5097362200D215B008B71FB /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		E5097363200D215B008B71FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E5097364200D215B008B71FB /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E5097364200D215B008B71FB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E5097365200D215B008B71FB /* README.md */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E5097366200D215B008B71FB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E5097367200D215B008B71FB /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E5097367200D215B008B71FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5097368200D215B008B71FB /* LaunchScreen.storyboard */,
+				E509736A200D215B008B71FB /* Main.storyboard */,
+				E509736C200D215B008B71FB /* Commons */,
+				E509736E200D215B008B71FB /* Ranking */,
+				E5097370200D215B008B71FB /* Vote */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E509736C200D215B008B71FB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E509736D200D215B008B71FB /* README.md */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		E509736E200D215B008B71FB /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				E509736F200D215B008B71FB /* README.md */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		E5097370200D215B008B71FB /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				E5097371200D215B008B71FB /* README.md */,
+			);
+			path = Vote;
+			sourceTree = "<group>";
+		};
+		E5097372200D215B008B71FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5097373200D215B008B71FB /* Controllers */,
+				E5097375200D215B008B71FB /* Services */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E5097373200D215B008B71FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5097374200D215B008B71FB /* README.md */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E5097375200D215B008B71FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5097376200D215B008B71FB /* Commons */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E5097376200D215B008B71FB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E5097377200D215B008B71FB /* README.md */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +278,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5097357200CA721008B71FB /* LaunchScreen.storyboard in Resources */,
-				E5097354200CA721008B71FB /* Assets.xcassets in Resources */,
-				E5097352200CA721008B71FB /* Main.storyboard in Resources */,
+				E509737D200D215C008B71FB /* README.md in Resources */,
+				E509737A200D215C008B71FB /* README.md in Resources */,
+				E5097381200D215C008B71FB /* README.md in Resources */,
+				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
+				E509737E200D215C008B71FB /* README.md in Resources */,
+				E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */,
+				E5097379200D215C008B71FB /* Info.plist in Resources */,
+				E5097380200D215C008B71FB /* README.md in Resources */,
+				E509737F200D215C008B71FB /* README.md in Resources */,
+				E5097378200D215C008B71FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E509734F200CA721008B71FB /* ViewController.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,20 +356,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E5097350200CA721008B71FB /* Main.storyboard */ = {
+		E5097368200D215B008B71FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E5097351200CA721008B71FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E5097355200CA721008B71FB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5097356200CA721008B71FB /* Base */,
+				E5097369200D215B008B71FB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E509736A200D215B008B71FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E509736B200D215B008B71FB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -357,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CatTestProject/Info.plist;
+				INFOPLIST_FILE = CatTestProject/Resources/Plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.latelier.CatTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CatTestProject/Info.plist;
+				INFOPLIST_FILE = CatTestProject/Resources/Plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.latelier.CatTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
