@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="MDQ-gl-d6J">
@@ -34,18 +39,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-p8-ES2">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-60" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-p8-ES2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
+                                    <imageView tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="331.5"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="k7E-Fp-uUE" appends="YES" id="x5B-q6-bta"/>
                                         </connections>
                                     </imageView>
-                                    <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
+                                        <rect key="frame" x="0.0" y="271.5" width="375" height="331.5"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="SjZ-wI-tt6" appends="YES" id="rOT-ZE-hOd"/>
@@ -56,11 +61,19 @@
                                     <constraint firstItem="mK9-tD-KyV" firstAttribute="height" secondItem="vpT-3m-MNr" secondAttribute="height" id="8oG-UG-6VE"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-NU-0t0">
+                                <rect key="frame" x="148" y="299.5" width="79.5" height="67.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="58"/>
+                                <color key="textColor" red="0.60370551220000002" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qoc-p8-ES2" firstAttribute="leading" secondItem="B8V-0C-V6t" secondAttribute="leading" id="4aw-we-W1n"/>
+                            <constraint firstItem="jqv-NU-0t0" firstAttribute="centerY" secondItem="VfN-qf-BWh" secondAttribute="centerY" id="AYx-ih-Nt5"/>
                             <constraint firstItem="Qoc-p8-ES2" firstAttribute="bottom" secondItem="B8V-0C-V6t" secondAttribute="bottom" id="go4-Pz-p8B"/>
+                            <constraint firstItem="jqv-NU-0t0" firstAttribute="centerX" secondItem="VfN-qf-BWh" secondAttribute="centerX" id="i99-lf-rt5"/>
                             <constraint firstItem="Qoc-p8-ES2" firstAttribute="top" secondItem="B8V-0C-V6t" secondAttribute="top" id="xik-Kq-KPH"/>
                             <constraint firstItem="Qoc-p8-ES2" firstAttribute="trailing" secondItem="B8V-0C-V6t" secondAttribute="trailing" id="y0q-AO-mV7"/>
                         </constraints>
@@ -70,6 +83,7 @@
                     <connections>
                         <outlet property="firstCatImageView" destination="mK9-tD-KyV" id="kWi-eG-OLe"/>
                         <outlet property="secondCatImageView" destination="vpT-3m-MNr" id="shN-Xw-6Hb"/>
+                        <outlet property="versusLabel" destination="jqv-NU-0t0" id="jtZ-Qq-X93"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Q-ed-5do" userLabel="First Responder" sceneMemberID="firstResponder"/>

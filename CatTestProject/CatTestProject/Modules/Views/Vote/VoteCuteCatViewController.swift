@@ -17,6 +17,7 @@ class VoteCuteCatViewController: BaseViewController {
     //MARK: - Variables & Constants
     @IBOutlet weak var firstCatImageView: UIImageView!
     @IBOutlet weak var secondCatImageView: UIImageView!
+    @IBOutlet weak var versusLabel: UILabel!
     
     //array listing all cats from API
     var catsArray = [Cat]()
@@ -42,8 +43,15 @@ class VoteCuteCatViewController: BaseViewController {
         getAllCatsRequest()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Draw shapeMask on firstCatImageView
+        addShapeMaskToTopImage()
+        //Draw shapeMask on secondCatImageView
+        addShapeMaskToDownImage()
+        //set pretty style to versusLabel
+        setUpVSLabelStyles()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +77,6 @@ class VoteCuteCatViewController: BaseViewController {
     func successloadingCats(jsonData: JSON) {
         
         catsArray = VoteService.fetchListOfCats(formattedJsonResponse: jsonData)
-        
         randomCatsArray = pickTwoDistinctCats(array: catsArray)
         setupUI()
     }
@@ -82,12 +89,13 @@ class VoteCuteCatViewController: BaseViewController {
     
     //MARK:- NavigationBar buttons methods
     
-    func showRankingScreen() {
+    @objc func showRankingScreen() {
         
     }
     
-    func searchNewCats() {
-        
+    @objc func searchNewCats() {
+        randomCatsArray = pickTwoDistinctCats(array: catsArray)
+        setupUI()
     }
     
     
@@ -118,15 +126,19 @@ class VoteCuteCatViewController: BaseViewController {
         return catViewsArray
     }
     
-    func setupUI () {
+    func setupUI() {
 
         if let imageStringURL = randomCatsArray[0].catImageUrl {
+            firstCatImageView.kf.indicatorType = .activity
             firstCatImageView.kf.setImage(with: URL(string: imageStringURL))
         }
+        
         if let imageStringURL = randomCatsArray[1].catImageUrl {
+            secondCatImageView.kf.indicatorType = .activity
             secondCatImageView.kf.setImage(with: URL(string: imageStringURL))
         }
     }
     
-    
 }
+
+
