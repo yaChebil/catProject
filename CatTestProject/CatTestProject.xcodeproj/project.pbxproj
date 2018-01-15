@@ -10,7 +10,6 @@
 		DBB299C1E78550F37F808B8E /* Pods_CatTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE5F1328BFF16308320C50 /* Pods_CatTestProject.framework */; };
 		E509734D200CA721008B71FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509734C200CA721008B71FB /* AppDelegate.swift */; };
 		E5097378200D215C008B71FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5097360200D215B008B71FB /* Assets.xcassets */; };
-		E5097379200D215C008B71FB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5097362200D215B008B71FB /* Info.plist */; };
 		E509737A200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097365200D215B008B71FB /* README.md */; };
 		E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097368200D215B008B71FB /* LaunchScreen.storyboard */; };
 		E509737C200D215C008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E509736A200D215B008B71FB /* Main.storyboard */; };
@@ -284,7 +283,6 @@
 				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
 				E509737E200D215C008B71FB /* README.md in Resources */,
 				E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */,
-				E5097379200D215C008B71FB /* Info.plist in Resources */,
 				E5097380200D215C008B71FB /* README.md in Resources */,
 				E509737F200D215C008B71FB /* README.md in Resources */,
 				E5097378200D215C008B71FB /* Assets.xcassets in Resources */,
@@ -333,9 +331,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CatTestProject/Pods-CatTestProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
