@@ -17,7 +17,8 @@
 		E509737E200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736F200D215B008B71FB /* README.md */; };
 		E509737F200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097371200D215B008B71FB /* README.md */; };
 		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
-		E5097381200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097377200D215B008B71FB /* README.md */; };
+		E5097383200D268F008B71FB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097382200D268F008B71FB /* NetworkService.swift */; };
+		E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097384200D26A3008B71FB /* ServerConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		E509736F200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097371200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E5097377200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5097382200D268F008B71FB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E5097384200D26A3008B71FB /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +212,8 @@
 		E5097376200D215B008B71FB /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				E5097377200D215B008B71FB /* README.md */,
+				E5097382200D268F008B71FB /* NetworkService.swift */,
+				E5097384200D26A3008B71FB /* ServerConfiguration.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -279,7 +282,6 @@
 			files = (
 				E509737D200D215C008B71FB /* README.md in Resources */,
 				E509737A200D215C008B71FB /* README.md in Resources */,
-				E5097381200D215C008B71FB /* README.md in Resources */,
 				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
 				E509737E200D215C008B71FB /* README.md in Resources */,
 				E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */,
@@ -352,7 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5097383200D268F008B71FB /* NetworkService.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
+				E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
