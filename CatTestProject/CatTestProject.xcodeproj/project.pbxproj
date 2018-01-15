@@ -19,6 +19,8 @@
 		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
 		E5097383200D268F008B71FB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097382200D268F008B71FB /* NetworkService.swift */; };
 		E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097384200D26A3008B71FB /* ServerConfiguration.swift */; };
+		E5097387200D3C6E008B71FB /* VoteCuteCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */; };
+		E509738B200D40CE008B71FB /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738A200D40CE008B71FB /* Cat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097382200D268F008B71FB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E5097384200D26A3008B71FB /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
+		E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCuteCatViewController.swift; sourceTree = "<group>"; };
+		E509738A200D40CE008B71FB /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E5097371200D215B008B71FB /* README.md */,
+				E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E5097376200D215B008B71FB /* Commons */,
+				E5097388200D40B7008B71FB /* Vote */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,6 +222,22 @@
 				E5097384200D26A3008B71FB /* ServerConfiguration.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		E5097388200D40B7008B71FB /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				E5097389200D40B7008B71FB /* Models */,
+			);
+			path = Vote;
+			sourceTree = "<group>";
+		};
+		E5097389200D40B7008B71FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E509738A200D40CE008B71FB /* Cat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5097387200D3C6E008B71FB /* VoteCuteCatViewController.swift in Sources */,
 				E5097383200D268F008B71FB /* NetworkService.swift in Sources */,
+				E509738B200D40CE008B71FB /* Cat.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
 				E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */,
 			);
