@@ -99,6 +99,14 @@ class VoteCuteCatViewController: BaseViewController {
     }
     
     
+    //MARK:- IBActions
+    
+    @IBAction func catImageTapped(sender: UITapGestureRecognizer) {
+        let tag = sender.view?.tag
+        print("Image Tapped with tag \(randomCatsArray[tag!].catImageUrl!)")
+    }
+    
+    
     //MARK:- Helpers
     
     func pickTwoDistinctCats(array:[Cat]) -> [Cat] {

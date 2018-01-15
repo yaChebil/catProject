@@ -42,14 +42,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-60" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-p8-ES2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="331.5"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="k7E-Fp-uUE" appends="YES" id="x5B-q6-bta"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
                                         <rect key="frame" x="0.0" y="271.5" width="375" height="331.5"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -89,12 +89,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Q-ed-5do" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="k7E-Fp-uUE">
                     <connections>
-                        <action selector="imageTappedWithSender:" destination="oOu-e0-Hmw" id="rGT-fs-vFN"/>
+                        <action selector="catImageTappedWithSender:" destination="oOu-e0-Hmw" id="OpD-Nl-mYv"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="SjZ-wI-tt6">
                     <connections>
-                        <action selector="imageTappedWithSender:" destination="oOu-e0-Hmw" id="ewg-c9-oee"/>
+                        <action selector="catImageTappedWithSender:" destination="oOu-e0-Hmw" id="fGQ-Cf-t7L"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
