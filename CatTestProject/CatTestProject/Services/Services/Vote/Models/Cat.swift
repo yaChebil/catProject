@@ -25,5 +25,7 @@ class Cat: NSObject {
         if let catImageUrl = jsonObject["url"].string  {
             self.catImageUrl = catImageUrl
         }
+        
+        self.catScore = 0
     }
 }
