@@ -13,7 +13,6 @@
 		E509737A200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097365200D215B008B71FB /* README.md */; };
 		E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097368200D215B008B71FB /* LaunchScreen.storyboard */; };
 		E509737C200D215C008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E509736A200D215B008B71FB /* Main.storyboard */; };
-		E509737D200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736D200D215B008B71FB /* README.md */; };
 		E509737E200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736F200D215B008B71FB /* README.md */; };
 		E509737F200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097371200D215B008B71FB /* README.md */; };
 		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
@@ -23,6 +22,7 @@
 		E509738B200D40CE008B71FB /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738A200D40CE008B71FB /* Cat.swift */; };
 		E509738D200D4451008B71FB /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738C200D4451008B71FB /* VoteService.swift */; };
 		E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738F200D47A8008B71FB /* AppExtensions.swift */; };
+		E5097399200E9023008B71FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097398200E9023008B71FB /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,6 @@
 		E5097365200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097369200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E509736B200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E509736D200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E509736F200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097371200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		E509738A200D40CE008B71FB /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		E509738C200D4451008B71FB /* VoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteService.swift; sourceTree = "<group>"; };
 		E509738F200D47A8008B71FB /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		E5097398200E9023008B71FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 		E509736C200D215B008B71FB /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				E509736D200D215B008B71FB /* README.md */,
+				E5097398200E9023008B71FB /* BaseViewController.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -317,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E509737D200D215C008B71FB /* README.md in Resources */,
 				E509737A200D215C008B71FB /* README.md in Resources */,
 				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
 				E509737E200D215C008B71FB /* README.md in Resources */,
@@ -398,6 +397,7 @@
 				E509738B200D40CE008B71FB /* Cat.swift in Sources */,
 				E509738D200D4451008B71FB /* VoteService.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
+				E5097399200E9023008B71FB /* BaseViewController.swift in Sources */,
 				E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */,
 				E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */,
 			);

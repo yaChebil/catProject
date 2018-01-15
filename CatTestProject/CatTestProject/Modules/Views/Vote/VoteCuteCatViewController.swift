@@ -12,7 +12,7 @@ import SwiftyJSON
 import Kingfisher
 
 
-class VoteCuteCatViewController: UIViewController {
+class VoteCuteCatViewController: BaseViewController {
 
     //MARK: - Variables & Constants
     @IBOutlet weak var firstCatImageView: UIImageView!
@@ -26,6 +26,15 @@ class VoteCuteCatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        //set custom navigationBar style
+        setNavigationBarTitleText(title: "CATMASH", titlePadding: 150, fontName: "Didot-Bold", fontSize: 34, titlePosition: .center)
+        
+        //set rightBarButtonItem
+        setNavigationBarButton(imageName: "button-ranking", selector: #selector(showRankingScreen), isShown: true, isEnabled: true, isRightButton:true)
+        
+        //set leftBarButtonItem
+        setNavigationBarButton(imageName: "button-refresh", selector: #selector(searchNewCats), isShown: true, isEnabled: true, isRightButton:false)
         
         //send request to get list of all cats from API
         getAllCatsRequest()
@@ -64,4 +73,17 @@ class VoteCuteCatViewController: UIViewController {
         
         print("API error")
     }
+    
+    
+    //MARK:- NavigationBar buttons methods
+    
+    func showRankingScreen() {
+        
+    }
+    
+    func searchNewCats() {
+        
+    }
+    
+    
 }
