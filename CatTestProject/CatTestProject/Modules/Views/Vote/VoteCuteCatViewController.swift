@@ -7,26 +7,61 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Kingfisher
+
 
 class VoteCuteCatViewController: UIViewController {
 
     //MARK: - Variables & Constants
+    @IBOutlet weak var firstCatImageView: UIImageView!
+    @IBOutlet weak var secondCatImageView: UIImageView!
+    
     var catsArray = [Cat]()
+    var randomCatsArray  = [Cat]()
     
     
     //MARK: - UIViewController lifeCycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //send request to get list of all cats from API
+        getAllCatsRequest()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
+    // MARK:- Networking & Request Callbacks
     
-
+    func getAllCatsRequest() {
+        
+        let parameters: Parameters = [:]
+        
+        NetworkService.sharedInstance.sendDataFetchRequest(url: "https://latelier.co/data/cats.json",
+            methodType: .get,
+            params: parameters,
+            urlEncoding: URLEncoding.default,
+            headers: nil,
+            callbackSuccess: successloadingCats,
+            callbackFailure: failureLoadingCats)
+    }
+    
+    func successloadingCats(jsonData: JSON) {
+        
+        catsArray = VoteService.fetchListOfCats(formattedJsonResponse: jsonData)
+    }
+    
+    func failureLoadingCats(error: AFError) {
+        
+        print("API error")
+    }
 }

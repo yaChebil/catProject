@@ -34,14 +34,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-60" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-p8-ES2">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-p8-ES2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="331.5"/>
+                                    <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-tD-KyV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="k7E-Fp-uUE" appends="YES" id="x5B-q6-bta"/>
+                                        </connections>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
-                                        <rect key="frame" x="0.0" y="271.5" width="375" height="331.5"/>
+                                    <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-3m-MNr">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SjZ-wI-tt6" appends="YES" id="rOT-ZE-hOd"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -59,8 +67,22 @@
                         <viewLayoutGuide key="safeArea" id="B8V-0C-V6t"/>
                     </view>
                     <navigationItem key="navigationItem" id="254-Uq-EKe"/>
+                    <connections>
+                        <outlet property="firstCatImageView" destination="mK9-tD-KyV" id="kWi-eG-OLe"/>
+                        <outlet property="secondCatImageView" destination="vpT-3m-MNr" id="shN-Xw-6Hb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0Q-ed-5do" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="k7E-Fp-uUE">
+                    <connections>
+                        <action selector="imageTappedWithSender:" destination="oOu-e0-Hmw" id="rGT-fs-vFN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SjZ-wI-tt6">
+                    <connections>
+                        <action selector="imageTappedWithSender:" destination="oOu-e0-Hmw" id="ewg-c9-oee"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="-156.07196401799101"/>
         </scene>

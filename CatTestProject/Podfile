@@ -9,5 +9,6 @@ target 'CatTestProject' do
   # Pods for CatTestProject
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 3.13.1'
 
 end

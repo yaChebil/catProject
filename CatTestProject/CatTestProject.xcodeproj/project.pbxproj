@@ -21,6 +21,8 @@
 		E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097384200D26A3008B71FB /* ServerConfiguration.swift */; };
 		E5097387200D3C6E008B71FB /* VoteCuteCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */; };
 		E509738B200D40CE008B71FB /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738A200D40CE008B71FB /* Cat.swift */; };
+		E509738D200D4451008B71FB /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738C200D4451008B71FB /* VoteService.swift */; };
+		E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738F200D47A8008B71FB /* AppExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E5097384200D26A3008B71FB /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
 		E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCuteCatViewController.swift; sourceTree = "<group>"; };
 		E509738A200D40CE008B71FB /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		E509738C200D4451008B71FB /* VoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteService.swift; sourceTree = "<group>"; };
+		E509738F200D47A8008B71FB /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		E5097363200D215B008B71FB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E509738E200D4792008B71FB /* Extensions */,
 				E5097364200D215B008B71FB /* Constants */,
 			);
 			path = Helpers;
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				E5097389200D40B7008B71FB /* Models */,
+				E509738C200D4451008B71FB /* VoteService.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -238,6 +244,14 @@
 				E509738A200D40CE008B71FB /* Cat.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E509738E200D4792008B71FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E509738F200D47A8008B71FB /* AppExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 				TargetAttributes = {
 					E5097348200CA721008B71FB = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -357,11 +372,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CatTestProject/Pods-CatTestProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,8 +396,10 @@
 				E5097387200D3C6E008B71FB /* VoteCuteCatViewController.swift in Sources */,
 				E5097383200D268F008B71FB /* NetworkService.swift in Sources */,
 				E509738B200D40CE008B71FB /* Cat.swift in Sources */,
+				E509738D200D4451008B71FB /* VoteService.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
 				E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */,
+				E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +546,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.latelier.CatTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -544,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.latelier.CatTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
