@@ -15,7 +15,7 @@ class VoteService {
         
         var catsArray: [Cat] = [Cat]()
         
-        let catJsonArray = formattedJsonResponse["images"]
+        let catJsonArray = formattedJsonResponse[Constants.AppModels.Cat.images]
     
         for aCatObject in catJsonArray.arrayValue {
             
