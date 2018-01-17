@@ -31,7 +31,7 @@ class VoteCuteCatViewController: BaseViewController {
         super.viewDidLoad()
       
         //set custom navigationBar style
-        setNavigationBarTitleText(title: "CATMASH", titlePadding: 150, fontName: "Didot-Bold", fontSize: 32, titlePosition: .center)
+        setNavigationBarTitleText(title: Constants.NavigationBarTitles.voteScreenTitle, titlePadding: 150, fontName: "Didot-Bold", fontSize: 32, titlePosition: .center)
         
         //set rightBarButtonItem
         setNavigationBarButton(imageName: "button-ranking", selector: #selector(showRankingScreen), isShown: true, isEnabled: true, isRightButton:true)
@@ -65,7 +65,7 @@ class VoteCuteCatViewController: BaseViewController {
         
         let parameters: Parameters = [:]
         
-        NetworkService.sharedInstance.sendDataFetchRequest(url: "https://latelier.co/data/cats.json",
+        NetworkService.sharedInstance.sendDataFetchRequest(url: Constants.ApiUrls.catListAPI,
             methodType: .get,
             params: parameters,
             urlEncoding: URLEncoding.default,

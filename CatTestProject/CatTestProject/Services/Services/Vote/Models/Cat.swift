@@ -18,11 +18,11 @@ class Cat: NSObject, NSCoding {
     
     init(jsonObject:JSON){
         
-        if let catId = jsonObject["id"].string  {
+        if let catId = jsonObject[Constants.AppModels.Cat.catId].string  {
             self.catId = catId
         }
         
-        if let catImageUrl = jsonObject["url"].string  {
+        if let catImageUrl = jsonObject[Constants.AppModels.Cat.catImageUrl].string  {
             self.catImageUrl = catImageUrl
         }
         
@@ -30,14 +30,14 @@ class Cat: NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.catId = aDecoder.decodeObject(forKey: "catId") as? String
-        self.catImageUrl = aDecoder.decodeObject(forKey: "catImageUrl") as? String
-        self.catScore = aDecoder.decodeObject(forKey: "catScore") as? Int
+        self.catId = aDecoder.decodeObject(forKey: Constants.AppModels.Cat.catId) as? String
+        self.catImageUrl = aDecoder.decodeObject(forKey: Constants.AppModels.Cat.catImageUrl) as? String
+        self.catScore = aDecoder.decodeObject(forKey: Constants.AppModels.Cat.catScore) as? Int
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(catId, forKey: "catId")
-        aCoder.encode(catImageUrl, forKey: "catImageUrl")
-        aCoder.encode(catScore, forKey: "catScore")
+        aCoder.encode(catId, forKey: Constants.AppModels.Cat.catId)
+        aCoder.encode(catImageUrl, forKey: Constants.AppModels.Cat.catImageUrl)
+        aCoder.encode(catScore, forKey: Constants.AppModels.Cat.catScore)
     }
 }

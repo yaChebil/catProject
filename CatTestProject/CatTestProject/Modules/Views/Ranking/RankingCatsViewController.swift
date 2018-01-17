@@ -22,7 +22,7 @@ class RankingCatsViewController: BaseViewController, iCarouselDataSource, iCarou
         super.viewDidLoad()
         
         //set custom navigationBar style
-        setNavigationBarTitleText(title: "LEADER BOARD", titlePadding: 150, fontName: "Didot-Bold", fontSize: 30, titlePosition: .center)
+        setNavigationBarTitleText(title: Constants.NavigationBarTitles.rankingScreenTitle, titlePadding: 150, fontName: "Didot-Bold", fontSize: 30, titlePosition: .center)
         
         //set leftBarButtonItem
         setNavigationBarButton(imageName: "button-back", selector: #selector(popToVoteScreen), isShown: true, isEnabled: true, isRightButton:false)
