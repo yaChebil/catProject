@@ -10,5 +10,6 @@ target 'CatTestProject' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Kingfisher' #'~> 3.13.1'
+  pod 'iCarousel'
 
 end

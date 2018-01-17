@@ -24,6 +24,7 @@
 		E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509738F200D47A8008B71FB /* AppExtensions.swift */; };
 		E5097399200E9023008B71FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097398200E9023008B71FB /* BaseViewController.swift */; };
 		E53367D4200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367D3200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift */; };
+		E53367D6200F4582008BF205 /* RankingCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367D5200F4582008BF205 /* RankingCatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E509738F200D47A8008B71FB /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		E5097398200E9023008B71FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E53367D3200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionVoteCuteCatViewController.swift; sourceTree = "<group>"; };
+		E53367D5200F4582008BF205 /* RankingCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E509736F200D215B008B71FB /* README.md */,
+				E53367D5200F4582008BF205 /* RankingCatsViewController.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -376,12 +379,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,6 +404,7 @@
 				E5097383200D268F008B71FB /* NetworkService.swift in Sources */,
 				E509738B200D40CE008B71FB /* Cat.swift in Sources */,
 				E53367D4200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift in Sources */,
+				E53367D6200F4582008BF205 /* RankingCatsViewController.swift in Sources */,
 				E509738D200D4451008B71FB /* VoteService.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
 				E5097399200E9023008B71FB /* BaseViewController.swift in Sources */,

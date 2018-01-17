@@ -100,5 +100,35 @@
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="-156.07196401799101"/>
         </scene>
+        <!--Ranking Cats View Controller-->
+        <scene sceneID="xQI-xs-g1b">
+            <objects>
+                <viewController storyboardIdentifier="RankingCatsViewController" id="4jU-G6-vrr" customClass="RankingCatsViewController" customModule="CatTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFC-ht-7Yn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewc-ZG-GsM" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ewc-ZG-GsM" firstAttribute="top" secondItem="gFC-ht-7Yn" secondAttribute="top" id="IUg-y6-MXs"/>
+                            <constraint firstItem="ewc-ZG-GsM" firstAttribute="leading" secondItem="DaE-Lo-bkv" secondAttribute="leading" id="J2s-Mc-0tt"/>
+                            <constraint firstItem="ewc-ZG-GsM" firstAttribute="bottom" secondItem="DaE-Lo-bkv" secondAttribute="bottom" id="V5i-s3-f3M"/>
+                            <constraint firstItem="ewc-ZG-GsM" firstAttribute="trailing" secondItem="DaE-Lo-bkv" secondAttribute="trailing" id="pyk-Js-OZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DaE-Lo-bkv"/>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="ewc-ZG-GsM" id="zWK-ig-Iva"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF2-XN-KV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="-156.07196401799101"/>
+        </scene>
     </scenes>
 </document>

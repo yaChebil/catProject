@@ -98,7 +98,9 @@ class VoteCuteCatViewController: BaseViewController {
     //MARK:- NavigationBar buttons methods
     
     @objc func showRankingScreen() {
-        
+        let rankingCatsViewController: RankingCatsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RankingCatsViewController") as! RankingCatsViewController
+    
+        self.navigationController?.pushViewController(rankingCatsViewController, animated: true)
     }
     
     @objc func searchNewCats() {
