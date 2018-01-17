@@ -81,8 +81,7 @@ class VoteCuteCatViewController: BaseViewController {
         //Store all new cats on UserDefaults so that we can start clean ranking
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: "catsArray") == nil {
-            userDefaults.setValue(NSKeyedArchiver.archivedData(withRootObject: catsArray), forKey: "catsArray")
-            userDefaults.synchronize()
+            Utils.updateStoredCatsArray(with: catsArray)
         }
         
         randomCatsArray = pickTwoDistinctCats(array: catsArray)
@@ -112,25 +111,24 @@ class VoteCuteCatViewController: BaseViewController {
     //MARK:- IBActions
     
     @IBAction func catImageTapped(sender: UITapGestureRecognizer) {
+        
         let tag = sender.view?.tag
-        print("Image Tapped with tag \(randomCatsArray[tag!].catId!)")
         
-        
-        //get stored array of cats on userDefaults
+        //get stored array of cats from userDefaults
         var arrayFromUserDef : [Cat]
-        let userDefaults = UserDefaults.standard
-        arrayFromUserDef = NSKeyedUnarchiver.unarchiveObject(with: (userDefaults.object(forKey: "catsArray") as! NSData) as Data) as! [Cat]
+        arrayFromUserDef = Utils.getStoredCatsArray()
        
-        
+        //find selected cat and increment its score
         if let i = arrayFromUserDef.index(where: { $0.catId == randomCatsArray[tag!].catId! }) {
             let selectedCat = arrayFromUserDef[i]
             selectedCat.catScore = selectedCat.catScore! + 1
             
             arrayFromUserDef[i] = selectedCat
-            userDefaults.setValue(NSKeyedArchiver.archivedData(withRootObject: arrayFromUserDef), forKey: "catsArray")
-            userDefaults.synchronize()
-            print("selected \(selectedCat.catScore!)")
+            //update stored cats array
+            Utils.updateStoredCatsArray(with: arrayFromUserDef)
         }
+        
+        searchNewCats()
     }
     
     
@@ -139,9 +137,8 @@ class VoteCuteCatViewController: BaseViewController {
     func pickTwoDistinctCats(array:[Cat]) -> [Cat] {
         
         var catViewsArray = [Cat]()
-        
+
         let firstCat = array.randomElement()
-        
         //unwrap optional var
         if let firstCat = firstCat {
             catViewsArray.append(firstCat)

@@ -13,7 +13,6 @@
 		E509737A200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097365200D215B008B71FB /* README.md */; };
 		E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097368200D215B008B71FB /* LaunchScreen.storyboard */; };
 		E509737C200D215C008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E509736A200D215B008B71FB /* Main.storyboard */; };
-		E509737F200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097371200D215B008B71FB /* README.md */; };
 		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
 		E5097383200D268F008B71FB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097382200D268F008B71FB /* NetworkService.swift */; };
 		E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097384200D26A3008B71FB /* ServerConfiguration.swift */; };
@@ -26,6 +25,7 @@
 		E53367D6200F4582008BF205 /* RankingCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367D5200F4582008BF205 /* RankingCatsViewController.swift */; };
 		E53367DB200F499D008BF205 /* RankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367DA200F499D008BF205 /* RankItemView.swift */; };
 		E53367DD200F49A9008BF205 /* RankItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53367DC200F49A9008BF205 /* RankItemView.xib */; };
+		E53367E0200F59FF008BF205 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367DF200F59FF008BF205 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		E5097365200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097369200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E509736B200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E5097371200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097382200D268F008B71FB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E5097384200D26A3008B71FB /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		E53367D5200F4582008BF205 /* RankingCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCatsViewController.swift; sourceTree = "<group>"; };
 		E53367DA200F499D008BF205 /* RankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankItemView.swift; sourceTree = "<group>"; };
 		E53367DC200F49A9008BF205 /* RankItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankItemView.xib; sourceTree = "<group>"; };
+		E53367DF200F59FF008BF205 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +141,7 @@
 		E5097363200D215B008B71FB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E53367DE200F59F4008BF205 /* Utils */,
 				E509738E200D4792008B71FB /* Extensions */,
 				E5097364200D215B008B71FB /* Constants */,
 			);
@@ -196,7 +197,6 @@
 		E5097370200D215B008B71FB /* Vote */ = {
 			isa = PBXGroup;
 			children = (
-				E5097371200D215B008B71FB /* README.md */,
 				E5097386200D3C6E008B71FB /* VoteCuteCatViewController.swift */,
 			);
 			path = Vote;
@@ -261,6 +261,14 @@
 				E53367D3200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E53367DE200F59F4008BF205 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E53367DF200F59FF008BF205 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +338,6 @@
 				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
 				E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */,
 				E5097380200D215C008B71FB /* README.md in Resources */,
-				E509737F200D215C008B71FB /* README.md in Resources */,
 				E5097378200D215C008B71FB /* Assets.xcassets in Resources */,
 				E53367DD200F49A9008BF205 /* RankItemView.xib in Resources */,
 			);
@@ -414,6 +421,7 @@
 				E5097399200E9023008B71FB /* BaseViewController.swift in Sources */,
 				E5097385200D26A3008B71FB /* ServerConfiguration.swift in Sources */,
 				E5097390200D47A8008B71FB /* AppExtensions.swift in Sources */,
+				E53367E0200F59FF008BF205 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

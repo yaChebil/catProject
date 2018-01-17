@@ -31,12 +31,11 @@ class RankingCatsViewController: BaseViewController, iCarouselDataSource, iCarou
         carousel.dataSource = self
         carousel.delegate = self
         //set carousel type
-        carousel.type = .invertedCylinder
+        carousel.type = .coverFlow
         
         //get stored array of cats on userDefaults
         var arrayFromUserDef : [Cat]
-        let userDefaults = UserDefaults.standard
-        arrayFromUserDef = NSKeyedUnarchiver.unarchiveObject(with: (userDefaults.object(forKey: "catsArray") as! NSData) as Data) as! [Cat]
+        arrayFromUserDef = Utils.getStoredCatsArray()
         rankedCatsArray = rankCats(array: arrayFromUserDef)
         carousel.reloadData()
     }
