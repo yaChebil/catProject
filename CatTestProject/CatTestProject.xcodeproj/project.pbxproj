@@ -25,6 +25,8 @@
 		E5097399200E9023008B71FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097398200E9023008B71FB /* BaseViewController.swift */; };
 		E53367D4200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367D3200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift */; };
 		E53367D6200F4582008BF205 /* RankingCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367D5200F4582008BF205 /* RankingCatsViewController.swift */; };
+		E53367DB200F499D008BF205 /* RankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53367DA200F499D008BF205 /* RankItemView.swift */; };
+		E53367DD200F49A9008BF205 /* RankItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53367DC200F49A9008BF205 /* RankItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E5097398200E9023008B71FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E53367D3200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionVoteCuteCatViewController.swift; sourceTree = "<group>"; };
 		E53367D5200F4582008BF205 /* RankingCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCatsViewController.swift; sourceTree = "<group>"; };
+		E53367DA200F499D008BF205 /* RankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankItemView.swift; sourceTree = "<group>"; };
+		E53367DC200F49A9008BF205 /* RankItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 			children = (
 				E509736F200D215B008B71FB /* README.md */,
 				E53367D5200F4582008BF205 /* RankingCatsViewController.swift */,
+				E53367DA200F499D008BF205 /* RankItemView.swift */,
+				E53367DC200F49A9008BF205 /* RankItemView.xib */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				E5097380200D215C008B71FB /* README.md in Resources */,
 				E509737F200D215C008B71FB /* README.md in Resources */,
 				E5097378200D215C008B71FB /* Assets.xcassets in Resources */,
+				E53367DD200F49A9008BF205 /* RankItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +412,7 @@
 				E509738B200D40CE008B71FB /* Cat.swift in Sources */,
 				E53367D4200EC1B1008BF205 /* ExtensionVoteCuteCatViewController.swift in Sources */,
 				E53367D6200F4582008BF205 /* RankingCatsViewController.swift in Sources */,
+				E53367DB200F499D008BF205 /* RankItemView.swift in Sources */,
 				E509738D200D4451008B71FB /* VoteService.swift in Sources */,
 				E509734D200CA721008B71FB /* AppDelegate.swift in Sources */,
 				E5097399200E9023008B71FB /* BaseViewController.swift in Sources */,
