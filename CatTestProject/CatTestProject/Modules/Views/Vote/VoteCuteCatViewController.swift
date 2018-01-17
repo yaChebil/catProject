@@ -31,7 +31,7 @@ class VoteCuteCatViewController: BaseViewController {
         super.viewDidLoad()
       
         //set custom navigationBar style
-        setNavigationBarTitleText(title: "CATMASH", titlePadding: 150, fontName: "Didot-Bold", fontSize: 34, titlePosition: .center)
+        setNavigationBarTitleText(title: "CATMASH", titlePadding: 150, fontName: "Didot-Bold", fontSize: 32, titlePosition: .center)
         
         //set rightBarButtonItem
         setNavigationBarButton(imageName: "button-ranking", selector: #selector(showRankingScreen), isShown: true, isEnabled: true, isRightButton:true)

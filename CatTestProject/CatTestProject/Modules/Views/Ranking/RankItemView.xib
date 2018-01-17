@@ -9,34 +9,47 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SnellRoundhand.ttc">
+            <string>SnellRoundhand</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="oRn-ok-nxm" customClass="RankItemView" customModule="CatTestProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="276"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="had-DF-D0t">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-ZH-ymF">
+                    <rect key="frame" x="3" y="8" width="293" height="227"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="had-DF-D0t">
                     <rect key="frame" x="8" y="13" width="283" height="217"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="217" id="8LR-vT-XVk"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csl-dh-Ht4">
-                    <rect key="frame" x="11" y="238" width="276" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="11" y="240" width="276" height="31"/>
+                    <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="29"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="csl-dh-Ht4" firstAttribute="top" secondItem="XuU-ZH-ymF" secondAttribute="bottom" constant="5" id="0Po-4R-2V2"/>
                 <constraint firstItem="aJK-T4-FXL" firstAttribute="trailing" secondItem="csl-dh-Ht4" secondAttribute="trailing" constant="12.779999999999999" id="3F6-zL-KRc"/>
+                <constraint firstItem="XuU-ZH-ymF" firstAttribute="top" secondItem="aJK-T4-FXL" secondAttribute="top" constant="8" id="8HU-QN-q49"/>
                 <constraint firstItem="csl-dh-Ht4" firstAttribute="leading" secondItem="aJK-T4-FXL" secondAttribute="leading" constant="11.220000000000001" id="Bwg-PM-hjF"/>
-                <constraint firstItem="csl-dh-Ht4" firstAttribute="top" secondItem="had-DF-D0t" secondAttribute="bottom" constant="8" id="W3w-NP-ZKS"/>
+                <constraint firstItem="aJK-T4-FXL" firstAttribute="trailing" secondItem="XuU-ZH-ymF" secondAttribute="trailing" constant="4" id="Mac-0R-Mst"/>
+                <constraint firstItem="csl-dh-Ht4" firstAttribute="top" secondItem="had-DF-D0t" secondAttribute="bottom" constant="10" id="W3w-NP-ZKS"/>
                 <constraint firstItem="had-DF-D0t" firstAttribute="top" secondItem="aJK-T4-FXL" secondAttribute="top" constant="13" id="ZZx-MD-4b6"/>
-                <constraint firstItem="aJK-T4-FXL" firstAttribute="bottom" secondItem="csl-dh-Ht4" secondAttribute="bottom" constant="11" id="f6U-64-BA7"/>
+                <constraint firstItem="XuU-ZH-ymF" firstAttribute="leading" secondItem="aJK-T4-FXL" secondAttribute="leading" constant="3" id="ZeC-3G-Kpy"/>
+                <constraint firstItem="aJK-T4-FXL" firstAttribute="bottom" secondItem="csl-dh-Ht4" secondAttribute="bottom" constant="5" id="f6U-64-BA7"/>
                 <constraint firstItem="had-DF-D0t" firstAttribute="leading" secondItem="aJK-T4-FXL" secondAttribute="leading" constant="8" id="iio-k3-aDm"/>
                 <constraint firstItem="aJK-T4-FXL" firstAttribute="trailing" secondItem="had-DF-D0t" secondAttribute="trailing" constant="9" id="vqv-vL-k5i"/>
             </constraints>

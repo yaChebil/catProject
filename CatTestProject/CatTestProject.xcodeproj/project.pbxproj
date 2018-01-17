@@ -13,7 +13,6 @@
 		E509737A200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097365200D215B008B71FB /* README.md */; };
 		E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5097368200D215B008B71FB /* LaunchScreen.storyboard */; };
 		E509737C200D215C008B71FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E509736A200D215B008B71FB /* Main.storyboard */; };
-		E509737E200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E509736F200D215B008B71FB /* README.md */; };
 		E509737F200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097371200D215B008B71FB /* README.md */; };
 		E5097380200D215C008B71FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5097374200D215B008B71FB /* README.md */; };
 		E5097383200D268F008B71FB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5097382200D268F008B71FB /* NetworkService.swift */; };
@@ -40,7 +39,6 @@
 		E5097365200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097369200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E509736B200D215B008B71FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E509736F200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097371200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097374200D215B008B71FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E5097382200D268F008B71FB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 		E509736E200D215B008B71FB /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				E509736F200D215B008B71FB /* README.md */,
 				E53367D5200F4582008BF205 /* RankingCatsViewController.swift */,
 				E53367DA200F499D008BF205 /* RankItemView.swift */,
 				E53367DC200F49A9008BF205 /* RankItemView.xib */,
@@ -331,7 +328,6 @@
 			files = (
 				E509737A200D215C008B71FB /* README.md in Resources */,
 				E509737C200D215C008B71FB /* Main.storyboard in Resources */,
-				E509737E200D215C008B71FB /* README.md in Resources */,
 				E509737B200D215C008B71FB /* LaunchScreen.storyboard in Resources */,
 				E5097380200D215C008B71FB /* README.md in Resources */,
 				E509737F200D215C008B71FB /* README.md in Resources */,

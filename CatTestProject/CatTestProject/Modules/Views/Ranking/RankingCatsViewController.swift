@@ -9,72 +9,61 @@
 import UIKit
 import iCarousel
 
-class RankingCatsViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
-   
+class RankingCatsViewController: BaseViewController, iCarouselDataSource, iCarouselDelegate {
     
     //MARK: - Variables & Constants
     @IBOutlet var carousel: iCarousel!
-    var items: [Int] = []
+    var rankedCatsArray: [Cat] = []
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        for i in 0 ... 99 {
-            items.append(i)
-        }
-    }
-    
-    
+
     //MARK: - UIViewController lifeCycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set custom navigationBar style
+        setNavigationBarTitleText(title: "LEADER BOARD", titlePadding: 150, fontName: "Didot-Bold", fontSize: 30, titlePosition: .center)
+        
+        //set leftBarButtonItem
+        setNavigationBarButton(imageName: "button-back", selector: #selector(popToVoteScreen), isShown: true, isEnabled: true, isRightButton:false)
+        
+        //set dataSource & delegate as self(RankingCatsViewController)
         carousel.dataSource = self
         carousel.delegate = self
-        carousel.type = .coverFlow2
+        //set carousel type
+        carousel.type = .invertedCylinder
+        
+        //get stored array of cats on userDefaults
+        var arrayFromUserDef : [Cat]
+        let userDefaults = UserDefaults.standard
+        arrayFromUserDef = NSKeyedUnarchiver.unarchiveObject(with: (userDefaults.object(forKey: "catsArray") as! NSData) as Data) as! [Cat]
+        rankedCatsArray = rankCats(array: arrayFromUserDef)
+        carousel.reloadData()
+    }
+    
+    @objc func popToVoteScreen() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     //MARK:- Carousel Delegate & DataSource methods
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return items.count
+        return rankedCatsArray.count
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        var label: UILabel
-        var itemView: UIImageView
-        
+      
+        //load our custom view from app bundle
         let rankItemView = Bundle.main.loadNibNamed("RankItemView", owner: self, options: nil)!.first as! RankItemView
-        rankItemView.catScoreLabel.text = "17 votes"
-        
-//        //reuse view if available, otherwise create a new view
-//        if let view = view as? UIImageView {
-//            itemView = view
-//            //get a reference to the label in the recycled view
-//            label = itemView.viewWithTag(1) as! UILabel
-//        } else {
-//            //don't do anything specific to the index within
-//            //this `if ... else` statement because the view will be
-//            //recycled and used with other index values later
-//            itemView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//            itemView.image = UIImage(named: "page.png")
-//            itemView.contentMode = .center
-//
-//            label = UILabel(frame: itemView.bounds)
-//            label.backgroundColor = .clear
-//            label.textAlignment = .center
-//            label.font = label.font.withSize(50)
-//            label.tag = 1
-//            itemView.addSubview(label)
-//        }
-        
-        //set item label
-        //remember to always set any properties of your carousel item
-        //views outside of the `if (view == nil) {...}` check otherwise
-        //you'll get weird issues with carousel item content appearing
-        //in the wrong place in the carousel
-       // label.text = "\(items[index])"
+
+        let cat = rankedCatsArray[index]
+        //setup the rankItemView image/label
+        rankItemView.catScoreLabel.text = "\(cat.catScore!) vote(s)"
+        if let imageStringURL = cat.catImageUrl {
+            rankItemView.catImageView.kf.indicatorType = .activity
+            rankItemView.catImageView.kf.setImage(with: URL(string: imageStringURL))
+        }
         
         return rankItemView
     }
@@ -84,6 +73,15 @@ class RankingCatsViewController: UIViewController, iCarouselDataSource, iCarouse
             return value * 1.1
         }
         return value
+    }
+    
+    
+    //MARK:- Helpers
+    
+    func rankCats(array: [Cat]) -> [Cat] {
+        
+        let sortedArray = array.sorted(by: { $0.catScore! > $1.catScore! })
+        return sortedArray
     }
     
 }
